@@ -13,6 +13,11 @@ class Student:
         for i in grades:
             self.gpa += i
         return self.gpa
+    def register_for_course(self):
+        new_course = input("New Course name = ")
+        self.courses_registered.append(new_course)
 
-nick = Student("n.kayiranga@gmail.com", "Nick-Lemy Kayiranga", courses_registered=["Learning Process", "Self Directed Learning", "Python Programming"])
-print(nick.calculate_gpa())
+# nick = Student("n.kayiranga@gmail.com", "Nick-Lemy Kayiranga", courses_registered=["Learning Process", "Self Directed Learning", "Python Programming"])
+# print(nick.calculate_gpa())
+# nick.register_for_course()
+# print(nick.courses_registered)
