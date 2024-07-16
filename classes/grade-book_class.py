@@ -8,5 +8,8 @@ class GradeBook:
     def add_student(self):
         name = input("Names = ")
         email = input("Student Email = ")
-        courses_registered = input("Courses Registered = ")
+        courses_number = input("How many courses are you in ? = ")
+        courses_registered =[]
+        for i in courses_number:
+            courses_registered.append(input(f"course{1} = "))
         self.student_list.append(Student(email, name, courses_registered))
