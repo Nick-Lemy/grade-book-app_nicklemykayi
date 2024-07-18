@@ -1,12 +1,11 @@
 from classes.student_class import Student
-grade_book = open('students_names.txt', 'w')
+grade_book = open('students_names.txt', 'a')
 
 def add_student():
     names = input("Enter Student Full name: ")
     email = input("Enter Student Email: ")
     student = Student(names=names, email=email, gpa=0, )
-    grade_book.write(f"{student.names}, {student.email}, {student.courses_registered}, {student.gpa}")
-
+    grade_book.write(f"\n{student.names}, {student.email}, {student.courses_registered}, {student.gpa}")
 
 def menu():
     print("\n")
