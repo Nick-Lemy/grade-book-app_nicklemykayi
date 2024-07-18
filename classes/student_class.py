@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 class Student:
-    def __init__(self, email, names, courses_registered, gpa=0):
+    def __init__(self, email, names, courses_registered=[], gpa=0):
         self.email = email
         self.names = names
         self.courses_registered = courses_registered

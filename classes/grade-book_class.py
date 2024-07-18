@@ -13,3 +13,5 @@ class GradeBook:
         for i in courses_number:
             courses_registered.append(input(f"course{1} = "))
         self.student_list.append(Student(email, name, courses_registered))
+    def add_course(self):
+        pass
