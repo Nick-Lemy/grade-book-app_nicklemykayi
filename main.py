@@ -5,7 +5,8 @@ from classes.course_class import Course
 
 grade_book = {}
 course_list = []
-# grade_book = open('students_names.txt', 'a')
+#grade_book = open('students_names.txt', 'a')
+
 def print_grade_book():
     for k, v in grade_book.items():
         print(f"{k} | {v[0]} | {v[1][0:].name} | {v[2]}")
@@ -46,6 +47,7 @@ def calculate_ranking():
 
 def menu():
     while True:
+
         print("\n")
         print("Welcome to the Grade Book App of ALU\n\n")
         print("What do you want to do ?\n\n")
@@ -56,6 +58,8 @@ def menu():
         print("5. Search by Grade\n")
         print("6. Generate Transcript\n")
         print("7. Exit\n\n")
+
+
         choice = int(input("Enter your choice: "))
         print("\n")
 
@@ -73,6 +77,5 @@ def menu():
 
         else:
             pass
-
 
 menu()
