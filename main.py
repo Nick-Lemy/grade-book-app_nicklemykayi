@@ -16,7 +16,8 @@ def add_student():
     student = Student(names=names, email=email, gpa=0, )
     grade_book[student.email]=[student.names, student.courses_registered, student.gpa]
     print_grade_book()
-    # grade_book.write(f"\n{student.names}, {student.email}, {student.courses_registered}, {student.gpa}")
+    #grade_book.write(f"\n{student.names}, {student.email}, {student.courses_registered}, {student.gpa}")
+    
     time.sleep(2)
 
 
@@ -37,6 +38,11 @@ def register_for_course():
     course_chose = int(input(f"\nChoice your course from 1 to {course_number}: "))
     grade_book[student_email][1].append(course_list[course_chose - 1])
     print_grade_book()
+
+def calculate_ranking():
+    for i in course_list:
+        input("")
+    pass
 
 def menu():
     while True:
