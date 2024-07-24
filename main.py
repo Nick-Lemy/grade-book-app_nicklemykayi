@@ -47,7 +47,7 @@ def calculate_ranking():
 
 def menu():
     while True:
-
+        
         print("\n")
         print("Welcome to the Grade Book App of ALU\n\n")
         print("What do you want to do ?\n\n")
