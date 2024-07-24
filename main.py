@@ -6,40 +6,70 @@ gradebook = GradeBook()
 
 def menu():
     while True:
-
         print("\n")
-        print("Welcome to the Grade Book App of ALU\n\n")
+        print("ALU GRADE BOOK APP by Nick-Lemy K.\n\n")
         print("What do you want to do ?\n")
         print("1. Add Student")
         print("2. Add Course")
         print("3. Register Student for Course")
         print("4. Upload Grades")
-        print("5. Calculate Ranking")
-        print("6. Search by Grade")
-        print("7. Generate Transcript")
-        print("8. Show all students")
-        print("9. Exit\n\n")
+        print("5. Save data")
+        print("6. Load your Data")
+        print("7. Calculate Ranking")
+        print("8. Search Student by Grade")
+        print("9. Generate Students' Transcripts")
+        print("10. Exit\n\n")
 
         choice = int(input("Enter your choice: "))
         print("\n")
 
         if choice == 1:
             gradebook.add_student()
+            time.sleep(3)
 
         elif choice == 2:
             gradebook.add_course()
-        
+            time.sleep(3)
+
         elif choice == 3:
+            gradebook.show_students()
             gradebook.register_student_for_course()
-        
+            time.sleep(3)
+
         elif choice == 4:
             gradebook.upload_grades()
+            time.sleep(3)
+
+        elif choice == 5:
+            gradebook.save_to_file()
+            print("Data saved !")
+            time.sleep(3)
+
+        elif choice == 6:
+            try:
+                gradebook.load_from_file()
+                print("Data loaded !")
+            except:
+                print("No data available...")
+            finally:
+                time.sleep(3)
 
         elif choice == 7:
             gradebook.calculate_GPA()
-            gradebook.show_students()
+            gradebook.calculate_ranking()
+            time.sleep(3)
 
+        elif choice == 8:
+            gradebook.search_by_grade()
+            time.sleep(3)
+
+        elif choice == 9:
+            gradebook.generate_transcript()
+            time.sleep(3)
+
+        elif choice == 10:
+            break
         else:
-            pass
+            print("Invalid choice, try again.")
 
 menu()
