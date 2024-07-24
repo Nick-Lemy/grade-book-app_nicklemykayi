@@ -47,15 +47,32 @@ class GradeBook:
                 for index, value  in enumerate(self.course_list):
                     print(f"{index + 1}. {value.name}")
                 choice = int(input("Choice your course: "))
-                grade = int(input(f"Course grade: "))
-                i.courses_registered[self.course_list[choice - 1]] = grade
+                i.courses_registered[self.course_list[choice - 1]] = 0
 
             else:
                 print("Student Not found")
-    def calculate_GPA(self, student):
-        for values in student.courses_registered.values():
-            student.gpa = sum(values)
+    def upload_grades(self):
+        student_email = input("student email: ")
+        for i in self.student_list:
+            if i.email == student_email:
+                print(f"The Student {i.names} has been found!")
+                for course in i.courses_registered.keys():
+                    print(course.name)
+                course_to_upload = input("Select a course: ")
+                for course in i.courses_registered.keys():
+                    if course_to_upload == course.name:
+                        grade = input(f"Enter grade for {course.name}: ")
+                        i.courses_registered[course] = grade
+
+    def calculate_GPA(self):
+        sum_grades = 0
+        sum_credits = 0
+        for student in self.student_list:
+            for course, grade in student.courses_registered.items():
+                sum_grades += course.credits * grade
+                sum_credits += course.credits
+            student.GPA += sum_grades / sum_credits
     
     def show_students(self):
         for i in self.student_list:
-            print(f"{i.names} : {i.email}")
+            print(f"{i.names} : {i.email} : {i.GPA}")

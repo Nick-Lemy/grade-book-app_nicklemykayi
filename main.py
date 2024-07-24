@@ -13,11 +13,12 @@ def menu():
         print("1. Add Student")
         print("2. Add Course")
         print("3. Register Student for Course")
-        print("4. Calculate Ranking")
-        print("5. Search by Grade")
-        print("6. Generate Transcript")
-        print("7. Show all students")
-        print("8. Exit\n\n")
+        print("4. Upload Grades")
+        print("5. Calculate Ranking")
+        print("6. Search by Grade")
+        print("7. Generate Transcript")
+        print("8. Show all students")
+        print("9. Exit\n\n")
 
         choice = int(input("Enter your choice: "))
         print("\n")
@@ -30,7 +31,12 @@ def menu():
         
         elif choice == 3:
             gradebook.register_student_for_course()
+        
+        elif choice == 4:
+            gradebook.upload_grades()
+
         elif choice == 7:
+            gradebook.calculate_GPA()
             gradebook.show_students()
 
         else:
