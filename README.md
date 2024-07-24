@@ -24,12 +24,12 @@ This Grade Book application helps manage student and course records. It allows y
 
 2. **Navigate to the Directory**:
     ```bash
-    cd grade-book-app
+    cd grade-book-app/grade-book-app_NickLemyKayiranga
     ```
 
 3. **Run the Application**:
     ```bash
-    python3 gradebook.py
+    python3 main.py
     ```
 
 ## Usage
