@@ -135,3 +135,4 @@ class GradeBook:
             print(f"Transcript for {student.names} ({student.email}):")
             for course, grade in student.courses_registered.items():
                 print(f"{course.name} = {grade} ({course.credits} credits)")
+            print("")
