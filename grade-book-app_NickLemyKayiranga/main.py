@@ -18,7 +18,8 @@ def menu():
         print("7. Calculate Ranking")
         print("8. Search Student by Grade")
         print("9. Generate Students' Transcripts")
-        print("10. Exit\n\n")
+        print("10. Students List")
+        print("11. Exit\n\n")
 
         choice = int(input("Enter your choice: "))
         print("\n")
@@ -67,8 +68,10 @@ def menu():
         elif choice == 9:
             gradebook.generate_transcript()
             time.sleep(3)
-
         elif choice == 10:
+            gradebook.show_students()
+            time.sleep(3)
+        elif choice == 11:
             break
         else:
             print("Invalid choice, try again.")
