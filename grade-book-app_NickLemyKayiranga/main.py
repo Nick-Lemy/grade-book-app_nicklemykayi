@@ -37,6 +37,7 @@ def menu():
             time.sleep(3)
 
         elif choice == 4:
+            gradebook.show_students()
             gradebook.upload_grades()
             time.sleep(3)
 
